@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    font-family: 'Barlow Semi Condensed', sans-serif !important;
+}
+
+.App {
+    display: grid;
+    min-height: 100vh;
+}
+
+.borderCircle {
+    display: flex;
+    padding: 1rem !important;
+    border-radius: 50% !important;
+    height: 7rem !important;
+    width: 7rem !important;
+    background-color: #f3f3f3 !important;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.borderCircle.lg:hover {
+    opacity: 1;
+}
+
+.borderCircle:hover {
+    opacity: 0.7;
+}
+
+.CircleIcon {
+    object-fit: scale-down;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.Header {
+    padding: 1rem;
+    border: 2.5px solid #f3f3f378;
+    border-radius: 1rem;
+    margin: 1.5rem !important;
+    width: auto;
+}
+
+.logo {
+    height: 6rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.scoreboard {
+    background-color: #f3f3f3;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.6rem 2.5rem;
+    border-radius: 0.5rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+.scoreheader {
+    color: hsl(229, 64%, 46%);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.score {
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: hsl(229, 25%, 31%);
+    margin: 0;
+
+}
+
+.pentagon {
+    height: 19rem;
+    width: 19rem;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.pentagonEdge {
+    position: absolute;
+}
+
+.pentagonEdge.Item1 {
+    top: calc(5% - 3.5rem);
+    left: calc(50% - 3.5rem);
+}
+
+.pentagonEdge.Item2 {
+    top: calc(38% - 3.5rem);
+    left: calc(8% - 3.5rem);
+}
+
+.pentagonEdge.Item3 {
+    top: calc(38% - 3.5rem);
+    left: calc(94% - 3.5rem);
+}
+
+.pentagonEdge.Item4 {
+    top: calc(92% - 3.5rem);
+    left: calc(19% - 3.5rem);
+}
+
+.pentagonEdge.Item5 {
+    top: calc(92% - 3.5rem);
+    left: calc(77% - 3.5rem);
+}
+
+@media only screen and (max-width: 600px) {
+    .Footer {
+        text-align: center;
+    }
+
+    .borderCircle.lg {
+        transform: scale(1.5);
+        cursor: auto;
+    }
+
+    .GameStatusCol.Desktop {
+        display: none !important;
+        transition: 1s;
+
+    }
+
+    .MobileScore {
+        margin-top: 4rem !important;
+        display: block !important;
+        transition: 1s;
+
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .Footer {
+        text-align: right;
+    }
+
+    .borderCircle.lg {
+        transform: scale(2);
+        cursor: auto;
+    }
+   
+
+    .GameStatusCol.Desktop {
+        display: block !important;
+        transition: 1s;
+    }
+
+    .MobileScore {
+        display: none !important;
+        transition: 1s;
+
+    }
+}
+.borderCircle.winner{
+    animation: pulse 2s infinite;
+}
+.button {
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 2.5rem;
+    transition: 1s;
+}
+
+.button.Rules {
+    border: 2px solid #f3f3f3bd;
+    background-color: transparent;
+    color: white;
+}
+
+.button.PlayAgain {
+    border: 2px solid #f3f3f3bd;
+    background-color: #f3f3f3;
+    color: hsl(214, 47%, 23%);
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button:hover {
+    outline: 0;
+    opacity: 0.8;
+}
+
+.chooseWeaponCol {
+    justify-content: center;
+    display: flex;
+}
+
+.GameStatusCol {
+    display: grid;
+    text-align: center;
+    color: #f3f3f3;
+    font-size: 3rem;
+    justify-content: center;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0.5rem rgba(255,255,255, 0.2),
+                    0 0 0 1rem rgba(255,255,255, 0.2),
+                    0 0 0 2rem rgba(255,255,255, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 0 1rem rgba(255,255,255, 0.2),
+                    0 0 0 2rem rgba(255,255,255, 0.2),
+                    0 0 0 4rem rgba(255,255,255, 0);
+      }
+}
+
+.modal-body{
+    text-align: center  !important;
+}
+.modal-header{
+    border-bottom : 0 !important
+}
+.modal-title{
+    font-size: 1.5rem;
+    color: #454a6f;
+}
+.close{
+    font-family: auto;
+    background: white;
+    border: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #c5c5c5;
+}
